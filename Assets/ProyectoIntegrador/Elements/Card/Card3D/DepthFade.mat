@@ -42,12 +42,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _Blas: 1
-    - _DepthFadePower: 0.005
+    - _DepthFadePower: 0.1
     - _DepthFadeScale: 1
-    - _DistortionWeight: 0.8
-    - _PannerSpeed: 0.1
-    - _TextureTiling: 0.29
-    - _VoronoiScale: -0.33
+    - _DistortionWeight: 1
+    - _PannerSpeed: 0.205
+    - _TextureTiling: 0.5
+    - _VoronoiScale: 1
     m_Colors:
     - _PannerDirection: {r: 0, g: -1, b: 0, a: 0}
   m_BuildTextureStacks: []
