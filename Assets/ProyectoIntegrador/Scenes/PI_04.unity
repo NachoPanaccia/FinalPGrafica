@@ -376,7 +376,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400004, guid: ae6041c0c33285c43b4f806225c736b0, type: 3}
       insertIndex: 3
       addedObject: {fileID: 446013972}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000011652330946, guid: ae6041c0c33285c43b4f806225c736b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1824268838}
   m_SourcePrefab: {fileID: 100100000, guid: ae6041c0c33285c43b4f806225c736b0, type: 3}
 --- !u!1 &217595393
 GameObject:
@@ -2615,6 +2618,27 @@ MonoBehaviour:
   textureTilingSlider: {fileID: 1579659697}
   distortionWeightSlider: {fileID: 1351143897}
   pannerSpeedSlider: {fileID: 1400009180}
+--- !u!1 &1824268836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000011652330946, guid: ae6041c0c33285c43b4f806225c736b0, type: 3}
+  m_PrefabInstance: {fileID: 154817682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1824268838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824268836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b99d51160cd171540917a999f1f4609a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  mouseSensitivity: 3
+  minPitch: -89
+  maxPitch: 89
 --- !u!1 &1850715364
 GameObject:
   m_ObjectHideFlags: 0
