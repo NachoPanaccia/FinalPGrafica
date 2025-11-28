@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ButtonDistortion
-  m_Shader: {fileID: 4800000, guid: 58372b7294caf954a84c259c6bad79eb, type: 3}
+  m_Name: ButtonHighlight
+  m_Shader: {fileID: 4800000, guid: ce95f5f282c3d7648835a0f1a39a1cd6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,35 +23,23 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _DistortionBlendMask:
-        m_Texture: {fileID: 2800000, guid: ee8680ca49b912746958dd16c5d23051, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DistortionNormal:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture0:
-        m_Texture: {fileID: 2800000, guid: 31d2d9aec1161db48989da90555e1307, type: 3}
+    - _flow:
+        m_Texture: {fileID: 2800000, guid: 92d7a5c6f6f75d246b3d55804b56c5cb, type: 3}
         m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
-    - _Texture1:
-        m_Texture: {fileID: 2800000, guid: 8304d38b0c6d6854799cdb8ea88e8581, type: 3}
-        m_Scale: {x: 0, y: 0}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2:
+    - _flow1:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture3:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+    - _ramp:
+        m_Texture: {fileID: 2800000, guid: ee83ede518fd9c545ad91a9f91f3e6ff, type: 3}
+        m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
-    - _TextureSample0:
+    - _ramp1:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -62,9 +50,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _ColorMask: 15
-    - _Float1: 3
-    - _Float2: 1000
-    - _Float3: 1
+    - _Float2: 0.32
+    - _HighlightSpeed: 0.1
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
@@ -73,7 +60,4 @@ Material:
     - _UseUIAlphaClip: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Vector1: {r: 0, g: 0, b: 0, a: 0}
-    - _Vector2: {r: 0.5, g: 0.5, b: 0, a: 0}
-    - _Vector3: {r: 2.44, g: -0, b: 0.45, a: -0.32}
   m_BuildTextureStacks: []
