@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45095545, g: 0.5008304, b: 0.5744251, a: 1}
+  m_IndirectSpecularColor: {r: 0.45095563, g: 0.5008307, b: 0.5744257, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -704,7 +704,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 574920532}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1796220170}
+        m_TargetAssemblyTypeName: dist, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &574920532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2618,6 +2630,55 @@ MonoBehaviour:
   textureTilingSlider: {fileID: 1579659697}
   distortionWeightSlider: {fileID: 1351143897}
   pannerSpeedSlider: {fileID: 1400009180}
+--- !u!1 &1796220168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796220169}
+  - component: {fileID: 1796220170}
+  m_Layer: 0
+  m_Name: dist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1796220169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796220168}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 150.88629, y: -48.599297, z: -32.56294}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1796220170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796220168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a720ce015711e7e46ae6f4ceb12fdb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMaterial: {fileID: 2100000, guid: b953e2ff9b96a644fb8d08c4869cb843, type: 2}
+  propertyName: _Distorcion
+  offValue: 0
+  onValue: 1
+  transitionTime: 0.5
 --- !u!1 &1824268836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011652330946, guid: ae6041c0c33285c43b4f806225c736b0, type: 3}
@@ -3072,3 +3133,4 @@ SceneRoots:
   - {fileID: 1913243861}
   - {fileID: 110511775}
   - {fileID: 217595395}
+  - {fileID: 1796220169}

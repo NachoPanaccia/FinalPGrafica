@@ -6,7 +6,7 @@ Shader "DistortionShader"
 	{
 		_TextureSample0("Texture Sample 0", 2D) = "bump" {}
 		_TextureSample1("Texture Sample 1", 2D) = "bump" {}
-		_Float0("Float 0", Range( 0 , 1)) = 0
+		_Distorcion("Distorcion", Range( 0 , 1)) = 0
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
@@ -36,7 +36,7 @@ Shader "DistortionShader"
 		ASE_DECLARE_SCREENSPACE_TEXTURE( _GrabTexture )
 		uniform sampler2D _TextureSample0;
 		uniform float4 _TextureSample0_ST;
-		uniform float _Float0;
+		uniform float _Distorcion;
 
 
 		inline float4 ASE_ComputeGrabScreenPos( float4 pos )
@@ -62,7 +62,7 @@ Shader "DistortionShader"
 			float4 ase_grabScreenPosNorm = ase_grabScreenPos / ase_grabScreenPos.w;
 			float4 appendResult4 = (float4(ase_grabScreenPosNorm.r , ase_grabScreenPosNorm.g , 0.0 , 0.0));
 			float2 uv_TextureSample0 = i.uv_texcoord * _TextureSample0_ST.xy + _TextureSample0_ST.zw;
-			float4 screenColor1 = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_GrabTexture,( appendResult4 + float4( UnpackScaleNormal( tex2D( _TextureSample0, uv_TextureSample0 ), _Float0 ) , 0.0 ) ).xy);
+			float4 screenColor1 = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_GrabTexture,( appendResult4 + float4( UnpackScaleNormal( tex2D( _TextureSample0, uv_TextureSample0 ), _Distorcion ) , 0.0 ) ).xy);
 			o.Emission = screenColor1.rgb;
 			o.Metallic = 1.0;
 			o.Alpha = 1;
@@ -75,9 +75,9 @@ Shader "DistortionShader"
 }
 /*ASEBEGIN
 Version=18900
--2003;203;1920;754;1843.811;376.8128;1.187482;True;False
+1920;0;1920;1059;1584.895;412.9449;1;True;False
 Node;AmplifyShaderEditor.GrabScreenPosition;5;-1090.75,48.72214;Inherit;False;0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.RangedFloatNode;8;-1194.146,343.7208;Inherit;False;Property;_Float0;Float 0;2;0;Create;True;0;0;0;False;0;False;0;0.1039789;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;8;-1194.146,343.7208;Inherit;False;Property;_Distorcion;Distorcion;2;0;Create;True;0;0;0;False;0;False;0;0.1039789;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.DynamicAppendNode;4;-813.8488,37.71603;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0
 Node;AmplifyShaderEditor.SamplerNode;7;-894.9483,262.1207;Inherit;True;Property;_TextureSample0;Texture Sample 0;0;0;Create;True;0;0;0;False;0;False;-1;None;32089dcc7047b0d419374bbbe90bd8e3;True;0;True;bump;Auto;True;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleAddOpNode;6;-590.61,148.6779;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT4;0
@@ -95,4 +95,4 @@ WireConnection;0;1;9;0
 WireConnection;0;2;1;0
 WireConnection;0;3;12;0
 ASEEND*/
-//CHKSM=3E9EEBD901AEABBD1C5EF54006B93CF1BE448185
+//CHKSM=DE27DD76BD6BB32AEDB52CEBEAD7600CCA4A95A7
